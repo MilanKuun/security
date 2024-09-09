@@ -20,6 +20,8 @@ const connection = mysql.createConnection({
   console.log('Connected to database as ID ' + connection.threadId);
 });
 
+
+//om de database te testen
 app.get('/check-db-connection', (req, res) => {
     connection.query('SELECT 1', (error, results, fields) => {
       if (error) {
@@ -30,6 +32,7 @@ app.get('/check-db-connection', (req, res) => {
       }
     });
   });
+
 
 
 
